@@ -176,6 +176,21 @@ a {
     justify-content: center;
     align-items: center;
 }
+/*For Testomonial */
+
+.icon-container--accent{
+    background: var(--color-accent);
+}
+
+.icon--white {
+    fill: white;
+}
+
+.icon--small {
+    width: 30px;
+    height: 30px;
+}
+/*For Testomonial*/
 
 /* Buttons */
 
@@ -459,3 +474,40 @@ a {
     }
 }
 
+
+/* Testimonials */
+
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image > img {
+    width: 100%;
+}
+.testimonial__image {
+    position: relative;
+}
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top:3rem;
+    right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2rem;
+    }
+    .testimonial .quote {
+        margin-left: 6rem;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .testimonial__image > .icon-container{
+        position: absolute;
+        top:3rem;
+        right: -30px;
+    }
+}
