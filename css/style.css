@@ -209,10 +209,18 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
+    outline:0;
     padding: 2rem 3rem;
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
+}
+
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
 .btn--primary {
@@ -294,6 +302,7 @@ a {
 .input-group .inputs {
     border:0;
     flex-grow: 1;
+    padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -316,11 +325,12 @@ a {
     border-radius: 7px;
     box-shadow: 0 0 20px 10px #f3f3f3;
     overflow: hidden;
-    width: 20%;
+    
 }
 
 .card__header ,.card__body {
     padding: 2rem 3rem;
+    
 }
 
 .card--primary .card__header {
@@ -335,12 +345,18 @@ a {
    
 }
 
+.card--primary .badge--primary {
+    background: #126de4;
+}
+
 .card--secondary .badge--secondary {
     background:#02cdf1;
 }
 
 /* Plan */
-
+.plan {
+    transition: transform .2s ease-out;
+}
 .plan__name {
     color:#fff;
     margin: 0;
@@ -366,7 +382,9 @@ a {
     letter-spacing: 1px;
     display: block;
 }
-
+.plan--popular {
+    transform: scale(1.1);
+}
 .plan .list__item {
     margin-bottom: 2rem;
 }
@@ -386,6 +404,12 @@ a {
     top: -6;
     right: 5%;
     
+}
+.plan:hover {
+    transform: scale(1.05);
+}
+.plan--popular:hover{
+    transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -485,8 +509,11 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
+@media screen and (min-width: 1024px) {
+    .grid--1x3 {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
 /* Testimonials */
 
 .testimonial {
@@ -733,3 +760,47 @@ a {
         align-self: center;
     }
 }
+
+
+/* Domain Block */
+
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee ;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 670px;
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin:0 auto
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+    }
+    
+}
+
+/* plan-block */
+
+.block-plans .grid {
+    gap:8rem 5rem;
+    
+   
+}
+
+.block-plans .card {
+    max-width: 400px;
+    margin:0 auto;
+    transition: all 0.4;
+}
+
