@@ -220,7 +220,7 @@ a {
     font-weight: 600;
     margin: 1rem 0;
     outline:0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
@@ -284,8 +284,11 @@ a {
 @media screen and (min-width: 1024px) {
     .btn {
         font-size: 1.5rem;
+        padding: 2rem 3rem;
     }
 }
+
+
 
 /* Inputs */
 
@@ -313,6 +316,7 @@ a {
     border:0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -411,8 +415,8 @@ a {
     width: 40px;
     display: inline-block;
     position: absolute;
-    top: -6;
-    right: 5%;
+    top: -6px;
+    right: 0%;
     
 }
 .plan:hover {
@@ -484,7 +488,7 @@ a {
 
 .quote__author {
     font-size: 3.3rem;
-    opacity: none;
+    opacity:1;
     margin-bottom: 1rem;
 
 }
@@ -705,6 +709,7 @@ a {
     flex-wrap: wrap;
     padding: 0 1rem;
     align-items: center;
+    margin: 0;
 }
 
 .nav__list {
@@ -715,6 +720,7 @@ a {
 .nav__item {
     padding: 0.5 2rem;
     border-bottom: 1px solid #222;
+    margin: 0;
 
     
 }
@@ -754,6 +760,8 @@ a {
         font-size: 1.6rem;
         max-height: 100%;
         opacity: 1;
+        gap:2rem;
+        padding-right: 2rem;
 
     }
     .nav__item {
@@ -800,13 +808,14 @@ a {
 
 .block-domain__prices {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
     justify-items: center;
     max-width: 700px;
-    margin:0 auto
+    margin:0 auto;
+    color:var(--color-heading)
 }
 
 @media screen and (min-width: 768px) {
@@ -828,7 +837,7 @@ a {
 .block-plans .card {
     max-width: 400px;
     margin:0 auto;
-    transition: all 0.4;
+    transition: all 0.4s;
 }
 /* Feature block */
 
@@ -904,7 +913,13 @@ a {
     margin-top: 5rem;
     text-align: center;
 }
-
+.footer__list > a {
+    color:#d2d0db;
+    transition: color .3s;
+   }
+   .footer__list > a:hover {
+    color: #fff;
+   }
 li {
     margin-top: 1rem;
 }
@@ -931,7 +946,7 @@ li {
    .grid {
     gap:3rem
    }
-   .container {
+   .footer .container {
     max-width: fit-content;
    }
    .footer__logo {
@@ -940,8 +955,9 @@ li {
    .collapsible__heading{
     font-size: 2rem;
    }
-   li {
+   .footer__list{
     font-size: 1.5rem;
-   }
 
+   }
+  
 }
