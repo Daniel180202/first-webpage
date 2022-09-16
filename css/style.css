@@ -32,6 +32,11 @@ body {
     color: var(--color-body);
 }
 
+::selection{
+    background:var(--color-primary);
+    color: #fff;
+}
+
 h1, h2 ,h3 {
     color: var(--color-heading);
     margin-bottom: 1rem;
@@ -48,6 +53,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
+    font-weight: 500;
    
 }
 
@@ -140,7 +146,7 @@ a {
 .list {
     list-style: none;
     padding-left: 0;
-    color:var(--color-heading);
+   
 }
 
 .list--inline .list__item {
@@ -151,6 +157,7 @@ a {
 .list--tick {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color:var(--color-heading)
 }
 
 .list--tick .list__item {
@@ -168,6 +175,7 @@ a {
 .icon {
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
 }
 
 .icon--primary {
@@ -430,6 +438,7 @@ a {
 
 .media {
     display: flex;
+    margin-bottom:4rem
 }
 
 .media__title {
@@ -504,6 +513,8 @@ a {
 .grid {
     display: grid;
 }
+
+
 
 @media screen and (min-width: 768px) {
     .grid--1x2 {
@@ -649,9 +660,14 @@ a {
     margin-top: 0;
 }
 
-.block--dark {
+.block--dark  {
     background: #000;
     color:#7b868b;
+}
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+   color:white;
 }
 
 .block--dark .block__heading {
@@ -659,13 +675,13 @@ a {
 }
 
 .block--skewed-right {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
    padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .block--skewed-left {
-    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
-   padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+   padding-bottom: calc(var(--padding-vertical) + 15rem);
 }
  
 /* Navigation Bar */
@@ -736,9 +752,7 @@ a {
 
 /* Hero or banner */
 
-.hero{
-    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
-}
+
 
 .hero__tagline {
     font-size: 2rem;
@@ -829,3 +843,41 @@ a {
     align-items: center;
 }
 
+/* Showcase Block */
+
+.showcase-block {
+    display: flex;
+    margin-top: 5rem;
+    padding: 1rem;
+    padding-bottom: 3rem;  
+    gap: 2rem;
+    
+    
+    
+}
+
+.showcase-block__heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.showcase-block__image {
+    width: 100%;
+}
+
+.showcase-block-grid {
+    gap: 2rem;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .showcase-block {
+        padding-bottom: 0;
+        margin-top: 1rem;
+    }
+    .showcase-block__image {
+        height: 45rem;
+    }
+}
